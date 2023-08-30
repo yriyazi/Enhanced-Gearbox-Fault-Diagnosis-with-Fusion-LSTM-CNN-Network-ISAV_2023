@@ -20,7 +20,9 @@ input_horizon       = config['model']['input_horizon']
 LSTM_outFeature     = config['model']['LSTM_outFeature']
 LSTM_NumLayer       = config['model']['LSTM_NumLayer']
 LSTM_hidden_size    = config['model']['LSTM_hidden_size']
-
+# model-CNN
+CNN_inChannel       = config['model']['CNN_inChannel']
+CNN_outChannel      = config['model']['CNN_outChannel']
 
 # CWT
 Scales              = config['CWT']['Scales']

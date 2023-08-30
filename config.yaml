@@ -1,0 +1,23 @@
+# General 
+Device      : 'cuda'
+num_epochs  : 1
+seed        : 42
+
+Dataset :
+  samples_per_test    : 32768
+  Total_test          : 29
+  test_Duration       : 2
+
+model :
+  # model         Maybe adding dropout in LSTM is good
+  input_horizon       : 200
+  # model-LSTM
+  LSTM_outFeature     : 100
+  LSTM_NumLayer       : 2
+  LSTM_hidden_size    : 64
+
+CWT :
+  Scales              : 51
+  wavelet_lis         : ['mexh','morl','gaus1','cmor1-1.0']   # Define the wavelet and scales
+  wavelet             : 1                        # You can choose other wavelet functions as well
+  Coefficient_Real    : True

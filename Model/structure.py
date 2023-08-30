@@ -19,7 +19,7 @@ class Structure(nn.Module):
         # MLP
         self.Classifier    =     nn.Linear(Utils.LSTM_outFeature*2,1)
 
-
+        self.gig = nn.Sigmoid()
 
     def _CWT(self,  x:np.array):
         coefficients, _     =    pywt.cwt(x, self.scales, Utils.wavelet)
@@ -42,4 +42,4 @@ class Structure(nn.Module):
         out     =    torch.cat([_C_out,_L_out], dim=1)
         out     =    self.Classifier(out)
 
-        return out
+        return  self.gig(out)

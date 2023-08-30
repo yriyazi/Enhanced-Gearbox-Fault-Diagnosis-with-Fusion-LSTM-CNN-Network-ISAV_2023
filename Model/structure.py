@@ -17,10 +17,11 @@ class Structure(nn.Module):
         # CWT
         self.scales        =     np.arange(1, Utils.Scales)
         # MLP
-        self.Classifier    =     nn.Sequential( nn.Linear(Utils.LSTM_outFeature*2,Utils.LSTM_outFeature*2//5),
+        _out = Utils.LSTM_outFeature + Utils.CNN_outFeature
+        self.Classifier    =     nn.Sequential( nn.Linear(_out,_out//5),
                                                 nn.Dropout(p=0.5),
                                                 nn.ReLU(),
-                                                nn.Linear(Utils.LSTM_outFeature*2//5,10),
+                                                nn.Linear(_out//5,10),
                                                 nn.Dropout(p=0.3),
                                                 nn.ReLU(),
                                                 nn.Linear(10,2),

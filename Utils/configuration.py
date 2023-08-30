@@ -23,7 +23,7 @@ LSTM_hidden_size    =    config['model']['LSTM_hidden_size']
 # model-CNN
 CNN_inChannel       =    config['model']['CNN_inChannel']
 CNN_outChannel      =    config['model']['CNN_outChannel']
-
+CNN_outFeature      =    config['model']['CNN_outFeature']  
 # CWT
 Scales              =    config['CWT']['Scales']
 wavelet_lis         =    config['CWT']['wavelet_lis']

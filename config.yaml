@@ -10,14 +10,16 @@ Dataset :
 
 model :
   # model         Maybe adding dropout in LSTM is good
-  input_horizon       : 200
+  input_horizon       : 400
   # model-LSTM
-  LSTM_outFeature     : 100
-  LSTM_NumLayer       : 2
-  LSTM_hidden_size    : 200
+  LSTM_outFeature     : 200
+  LSTM_NumLayer       : 3
+  LSTM_hidden_size    : 300
   # model-CNN
   CNN_inChannel       : 1
   CNN_outChannel      : 10
+  CNN_outFeature      : 10
+
 
 CWT :
   Scales              : 51

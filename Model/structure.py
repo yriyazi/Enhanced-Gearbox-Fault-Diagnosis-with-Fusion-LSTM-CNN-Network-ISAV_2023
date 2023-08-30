@@ -1,10 +1,10 @@
-import                          Utils
-import                          torch
-import                          pywt
-import                          torch.nn        as nn
-import                          numpy           as np
-from    .cnn_net   import       InceptionBlock
-from    .lstm_net  import       LSTMModel
+import                         Utils
+import                         torch
+import                         pywt
+import                         torch.nn          as   nn
+import                         numpy             as   np
+from    .cnn_net    import     InceptionBlock
+from    .lstm_net   import     LSTMModel
 
 
 

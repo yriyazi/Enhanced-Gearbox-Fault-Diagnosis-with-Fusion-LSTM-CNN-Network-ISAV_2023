@@ -17,7 +17,14 @@ class Structure(nn.Module):
         # CWT
         self.scales        =     np.arange(1, Utils.Scales)
         # MLP
-        self.Classifier    =     nn.Linear(Utils.LSTM_outFeature*2,1)
+        self.Classifier    =     nn.Sequential( nn.Linear(Utils.LSTM_outFeature*2,Utils.LSTM_outFeature*2//5),
+                                                nn.Dropout(p=0.5),
+                                                nn.ReLU(),
+                                                nn.Linear(Utils.LSTM_outFeature*2//5,10),
+                                                nn.Dropout(p=0.3),
+                                                nn.ReLU(),
+                                                nn.Linear(10,2),
+                                               )
 
         self.gig = nn.Sigmoid()
 
@@ -42,4 +49,4 @@ class Structure(nn.Module):
         out     =    torch.cat([_C_out,_L_out], dim=1)
         out     =    self.Classifier(out)
 
-        return  self.gig(out)
+        return  out #self.gig(out)

@@ -29,8 +29,9 @@ class InceptionBlock(nn.Module):
         self.pool           =   nn.MaxPool2d(kernel_size=3, stride=1, padding = 1)
         self.conv1x1_pool   =   nn.Conv2d(self.in_channels,  self.out_channel, kernel_size=1)
 
-        self.head           =   model = nn.Sequential(
+        self.head           =   nn.Sequential(
                                                         nn.Conv2d(Utils.LSTM_outFeature//2, Utils.LSTM_outFeature, kernel_size=(4,16),stride=2, padding=0),
+                                                        nn.Dropout2d(),
                                                         nn.ReLU(),
                                                         nn.Conv2d(Utils.LSTM_outFeature,    Utils.LSTM_outFeature, kernel_size=(4,16),stride=3, padding=0),
                                                         nn.ReLU(),

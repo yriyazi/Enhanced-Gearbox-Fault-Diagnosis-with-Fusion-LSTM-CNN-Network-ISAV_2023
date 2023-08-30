@@ -19,7 +19,6 @@ class LSTMModel(nn.Module):
     def forward(self, x)->tuple:
         out, (h_state,C_state) = self.lstm(x)
         
-        print(out.shape)
         if len(out.shape)==2:
             out = self.fc(out[:, :])
         if len(out.shape)==3:

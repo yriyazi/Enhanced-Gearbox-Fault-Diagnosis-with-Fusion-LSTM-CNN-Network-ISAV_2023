@@ -10,9 +10,9 @@ num_epochs          = config['num_epochs']
 seed                = config['seed']
 
 #datasets
-samples_per_test    = config['datasets']['samples_per_test']
-Total_test          = config['datasets']['Total_test']
-test_Duration       = config['datasets']['test_Duration']
+samples_per_test    = config['Dataset']['samples_per_test']
+Total_test          = config['Dataset']['Total_test']
+test_Duration       = config['Dataset']['test_Duration']
 
 # Access model architecture parameters
 input_horizon       = config['model']['input_horizon']

@@ -7,8 +7,8 @@ class InceptionBlock(nn.Module):
         super(InceptionBlock, self).__init__()
         self.in_channels = in_channels
         self.out_channel = out_channel
+
         # 1x1 convolution branch
-        
         self.conv1x1        =   nn.Conv2d(self.in_channels, self.out_channel, kernel_size=1)
         
     
@@ -37,6 +37,7 @@ class InceptionBlock(nn.Module):
                                                     )
     def GAP(self, x):
         return torch.mean(x, dim=[2, 3])    
+         
          
     def forward(self, x):
         out1x1 = self.conv1x1(x)

@@ -11,43 +11,43 @@ class InceptionBlock(nn.Module):
         # 1x1 convolution branch
         self.conv1x1        =   nn.Sequential(
                                             nn.Conv2d(self.in_channels, self.out_channel, kernel_size=1),
-                                            nn.ReLU())
+                                            nn.ReLU(inplace=True))
         
     
         # 1x1 conv followed by 3x3 conv branch
         self.conv3x3        =   nn.Sequential(
                                             nn.Conv2d(self.in_channels, self.out_channel, kernel_size=1),
-                                            nn.ReLU(),
+                                            nn.ReLU(inplace=True),
                                             nn.Conv2d(self.out_channel, self.out_channel, kernel_size=3, padding='same'),
-                                            nn.ReLU())
+                                            nn.ReLU(inplace=True))
 
 
         # 1x1 conv followed by 5x5 conv branch
         self.conv5x5        =   nn.Sequential(
                                             nn.Conv2d(self.in_channels, self.out_channel, kernel_size=1),
-                                            nn.ReLU(),
+                                            nn.ReLU(inplace=True),
                                             nn.Conv2d(self.out_channel, self.out_channel, kernel_size=5, padding='same'),
-                                            nn.ReLU())
+                                            nn.ReLU(inplace=True))
 
         
         # 1x1 conv followed by 9x9 conv branch
         self.conv9x9        =   nn.Sequential(
                                                 nn.Conv2d(self.in_channels, self.out_channel, kernel_size=1),
-                                                nn.ReLU(),
+                                                nn.ReLU(inplace=True),
                                                 nn.Conv2d(self.out_channel, self.out_channel, kernel_size=9, padding='same'),
-                                                nn.ReLU)
+                                                nn.ReLU(inplace=True))
         # 3x3 pooling followed by 1x1 conv branch
         self.conv1x1_pool   =   nn.Sequential(nn.MaxPool2d(kernel_size=3, stride=1, padding = 1),
-                                              nn.ReLU(),
+                                              nn.ReLU(inplace=True),
                                               nn.Conv2d(self.in_channels,  self.out_channel, kernel_size=1),
-                                              nn.ReLU(),)
+                                              nn.ReLU(inplace=True),)
         
         self.head           =   nn.Sequential(
                                             nn.Conv2d(self.out_channel*5, Utils.CNN_outFeature, kernel_size=(4,16),stride=2, padding=0),
                                             nn.Dropout2d(),
-                                            nn.ReLU(),
+                                            nn.ReLU(inplace=True),
                                             nn.Conv2d(Utils.CNN_outFeature,    Utils.CNN_outFeature, kernel_size=(4,16),stride=3, padding=0),
-                                            nn.ReLU(),
+                                            nn.ReLU(inplace=True),
                                             )
     def GAP(self, x):
         return torch.mean(x, dim=[2, 3])    

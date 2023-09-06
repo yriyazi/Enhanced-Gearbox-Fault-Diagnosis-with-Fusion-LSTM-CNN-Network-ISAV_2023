@@ -4,6 +4,13 @@ import Utils
 
 class InceptionBlock(nn.Module):
     def __init__(self, in_channels, out_channel):
+        """
+        Initialize the InceptionBlock with various branches for different convolutions.
+        
+        Args:
+            in_channels (int): Number of input channels.
+            out_channel (int): Number of output channels.
+        """
         super(InceptionBlock, self).__init__()
         self.in_channels = in_channels
         self.out_channel = out_channel
@@ -59,10 +66,28 @@ class InceptionBlock(nn.Module):
                                                 nn.ReLU(inplace=True),
                                             )
     def GAP(self, x):
+        """
+        Global Average Pooling (GAP) operation.
+        
+        Args:
+            x (Tensor): Input tensor.
+            
+        Returns:
+            Tensor: Result of GAP.
+        """
         return torch.mean(x, dim=[2, 3])    
          
          
     def forward(self, x):
+        """
+        Forward pass through the InceptionBlock.
+        
+        Args:
+            x (Tensor): Input tensor.
+            
+        Returns:
+            Tensor: Output tensor.
+        """
         out1x1 = self.conv1x1(x)
         out3x3 = self.conv3x3(x)
         out5x5 = self.conv5x5(x)

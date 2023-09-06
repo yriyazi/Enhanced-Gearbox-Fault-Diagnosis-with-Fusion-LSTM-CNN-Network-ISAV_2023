@@ -19,10 +19,10 @@ class Structure(nn.Module):
         # MLP
         _out = Utils.LSTM_outFeature + Utils.CNN_outFeature
         self.Classifier    =     nn.Sequential( nn.Linear(_out,_out//5),
-                                                nn.Dropout(p=0.5),
+                                                # nn.Dropout(p=0.5),
                                                 nn.ReLU(),
                                                 nn.Linear(_out//5,10),
-                                                nn.Dropout(p=0.3),
+                                                # nn.Dropout(p=0.3),
                                                 nn.ReLU(),
                                                 nn.Linear(10,2),
                                                )

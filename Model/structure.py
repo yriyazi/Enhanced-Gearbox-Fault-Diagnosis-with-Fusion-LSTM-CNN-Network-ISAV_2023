@@ -35,8 +35,10 @@ class Structure_CNN_RNN(nn.Module):
         _out = Utils.LSTM_outFeature + Utils.CNN_outFeature
         self.Classifier = nn.Sequential(
             nn.Linear(_out, _out // 5),
+            nn.Dropout(0.5),
             nn.ReLU(),
             nn.Linear(_out // 5, 10),
+            # nn.Dropout(0.2),
             nn.ReLU(),
             nn.Linear(10, 2),
         )
@@ -69,6 +71,7 @@ class Structure_CNN(nn.Module):
         _out = Utils.CNN_outFeature
         self.Classifier = nn.Sequential(
             nn.Linear(_out, _out // 5),
+            nn.Dropout(0.2),
             nn.ReLU(),
             nn.Linear(_out // 5, 10),
             nn.ReLU(),

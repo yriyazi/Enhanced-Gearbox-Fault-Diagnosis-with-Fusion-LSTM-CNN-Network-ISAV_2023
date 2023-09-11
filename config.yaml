@@ -21,7 +21,7 @@ model :
   CNN_outFeature      : 80
 
 CWT :
-  Scales              : 100 # 50
+  Scales              : 17 # 50
   wavelet_lis         : ['mexh','morl','gaus1','cmor1-1.0']   # Define the wavelet and scales
   wavelet             : 2                       # You can choose other wavelet functions as well
   Coefficient_Real    : True

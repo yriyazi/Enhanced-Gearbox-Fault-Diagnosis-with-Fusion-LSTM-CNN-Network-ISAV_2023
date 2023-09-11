@@ -6,10 +6,10 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 1. The origin of this code must not be misrepresented; you must not claim that you wrote the original code. If you use this code in a product, an acknowledgment in the product documentation would be appreciated, but is not required.
 
-2. Generated Comments: Comments within the codebase that appear to be explanatory or instructional in nature have been automatically generated with the assistance of ChatGPT. These comments are not reflective of manual human input.
+2. Generated Comments: Some comments within the codebase that appear to be explanatory or instructional in nature have been automatically generated with the assistance of ChatGPT. These comments are not reflective of manual human input.
 
-3. Private Dataset: This software may have been developed using private datasets. The datasets used to train the underlying model are not included in this repository and are not available for public use.
+3. Sharing and Collaboration: The generated code is suitable for sharing and collaboration after informing the authors of the repository. If you intend to use, modify, or distribute this code, we kindly request that you inform the authors about your intentions and any modifications made.
 
-4. Sharing and Collaboration: The generated code is suitable for sharing and collaboration after informing the authors of the repository. If you intend to use, modify, or distribute this code, we kindly request that you inform the authors about your intentions and any modifications made.
+4. Dataset Information: The code is associated with the "Gearbox Fault Diagnosis" dataset, which is available at [https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis]. This dataset includes vibration data recorded using SpectraQuest’s Gearbox Fault Diagnostics Simulator, with recordings from 4 vibration sensors in four different directions, under variations of load from '0' to '90' percent. The dataset covers two different scenarios: healthy condition and broken tooth condition. There are 20 files in total, 10 for a healthy gearbox and 10 from a broken one. Each file corresponds to a given load from 0% to 90% in steps of 10%.
 
 THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

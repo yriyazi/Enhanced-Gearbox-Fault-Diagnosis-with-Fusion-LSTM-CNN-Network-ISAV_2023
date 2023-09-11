@@ -29,3 +29,11 @@ Scales              =    config['CWT']['Scales']
 wavelet_lis         =    config['CWT']['wavelet_lis']
 wavelet             =    wavelet_lis[config['CWT']['wavelet']]
 Coefficient_Real    =    config['CWT']['Coefficient_Real']
+
+#optimizer
+learning_rate       =    config['optimizer']['learning_rate']
+momentum            =    config['optimizer']['momentum']
+weight_decay        =    config['optimizer']['weight_decay']
+
+#loss
+label_smoothing     =    config['loss']['label_smoothing']

@@ -20,9 +20,16 @@ model :
   CNN_outChannel      : 10
   CNN_outFeature      : 80
 
-
 CWT :
   Scales              : 50
   wavelet_lis         : ['mexh','morl','gaus1','cmor1-1.0']   # Define the wavelet and scales
   wavelet             : 2                       # You can choose other wavelet functions as well
   Coefficient_Real    : True
+
+loss:
+  label_smoothing     : 0.3
+
+optimizer:
+  learning_rate       : 0.0001
+  momentum            : 0.9
+  weight_decay        : 0.001

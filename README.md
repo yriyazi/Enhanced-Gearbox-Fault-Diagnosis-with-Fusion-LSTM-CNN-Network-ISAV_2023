@@ -7,20 +7,20 @@ This repository addresses the scarcity of mechanical engineering datasets tailor
 
 ## Content
 
-The Gearbox Fault Diagnosis dataset consists of vibration data recorded using SpectraQuest’s Gearbox Fault Diagnostics Simulator. The dataset captures vibrations using four sensors placed in different directions, under varying loads from 0% to 90%. It encompasses two distinct scenarios:
+The Gearbox Fault Diagnosis dataset consists of vibration data recorded using SpectraQuest's Gearbox Fault Diagnostics Simulator. The dataset captures vibrations using four sensors placed in different directions under varying loads from 0% to 90%. It encompasses two distinct scenarios:
 
 1. **Healthy Condition**
 2. **Broken Tooth Condition**
 
-In total, there are 20 files, with 10 corresponding to a healthy gearbox and 10 from a gearbox with a broken tooth. Each file corresponds to a specific load, ranging from 0% to 90% in 10% increments.
+There are 20 files, with 10 corresponding to a healthy gearbox and ten from a gearbox with a broken tooth. Each file corresponds to a specific load, ranging from 0% to 90% in 10% increments.
 
 ## Repository Structure
 
-This repository is organized into two main branches, each addressing a different approach for fault detection:
+This repository is organized into two main branches, each addressing a different approach to fault detection:
 
 ### 1. LSTM Branch
 
-This branch focuses on applying Long Short-Term Memory (LSTM) networks for fault detection. LSTMs are a type of recurrent neural network well-suited for sequential data, making them a promising choice for analyzing time series vibration data.
+This branch focuses on applying Long Short-Term Memory (LSTM) networks for fault detection. LSTMs are a recurrent neural network well-suited for sequential data, making them a promising choice for analyzing time series vibration data.
 
 ### 2. Continuous Wavelet Transform with CNN Branch
 
@@ -28,7 +28,7 @@ This branch employs a combination of Continuous Wavelet Transform (CWT) and Conv
 
 ## Getting Started
 
-For detailed instructions on setting up and running the code in each branch, please refer to the respective branch's README.md file.
+For detailed instructions on setting up and running the code in each branch, please look at the respective branch's README.md file.
 
 ## Citation
 
@@ -40,7 +40,7 @@ If you find this work helpful or build upon it in your research, please consider
 
 ## License
 
-This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the terms of the MIT License. Please look at the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 

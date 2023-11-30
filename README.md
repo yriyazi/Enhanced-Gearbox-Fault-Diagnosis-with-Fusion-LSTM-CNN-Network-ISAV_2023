@@ -30,6 +30,14 @@ This branch employs a combination of Continuous Wavelet Transform (CWT) and Conv
 
 For detailed instructions on setting up and running the code in each branch, please refer to the respective branch's README.md file.
 
+## Citation
+
+If you find this work helpful or build upon it in your research, please consider citing the following paper:
+
+```
+[Navidreza Ghanbari, Yassin Riyazi, Farzad A. Shirazi*, and Ahmad Kalhor. 2023. "Enhanced Gearbox Fault Diagnosis with Fusion LSTM CNN Network." ISAV, 2023, Page Numbers. DOI]
+```
+
 ## License
 
 This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.

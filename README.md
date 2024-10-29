@@ -7,7 +7,7 @@ This repository addresses the scarcity of mechanical engineering datasets tailor
 
 ## Content
 
-The Gearbox Fault Diagnosis dataset consists of vibration data recorded using SpectraQuest's Gearbox Fault Diagnostics Simulator. The dataset captures vibrations using four sensors placed in different directions under varying loads from 0% to 90%. It encompasses two distinct scenarios:
+The [Gearbox Fault Diagnosis dataset](https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis) consists of vibration data recorded using SpectraQuest's Gearbox Fault Diagnostics Simulator. The dataset captures vibrations using four sensors placed in different directions under varying loads from 0% to 90%. It encompasses two distinct scenarios:
 
 1. **Healthy Condition**
 2. **Broken Tooth Condition**

@@ -21,9 +21,9 @@ class LSTMModel(nn.Module):
         # Create a fully connected (linear) layer to transform LSTM output to the desired output size
         self.fc = nn.Linear(hidden_size, output_size)
 
-    def forward(self, x) -> tuple:
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         # Forward pass through the LSTM layer
-        out, (h_state, C_state) = self.lstm(x)
+        out, (h_state, _) = self.lstm(x)
         
         # Check the shape of the 'out' tensor and apply the fully connected layer accordingly
         if   len(out.shape) == 2:

@@ -8,7 +8,7 @@
 > **Revolutionizing industrial maintenance through intelligent fault detection!** This repository presents a groundbreaking deep learning approach that achieves **100% accuracy** in gearbox fault diagnosis by fusing the power of LSTM networks and CNNs with advanced signal processing techniques.
 
 
-
+![Architecture](Images/Architecture.png)
 ## 🌟 Overview
 
 In the age of Industry 4.0, **predictive maintenance** is not just an advantage—it's a necessity. This project tackles one of the most critical challenges in industrial systems: **detecting gearbox faults before catastrophic failures occur**. By leveraging state-of-the-art deep learning architectures and innovative signal processing, we've created a robust, noise-resistant solution that transforms vibration data into actionable intelligence.

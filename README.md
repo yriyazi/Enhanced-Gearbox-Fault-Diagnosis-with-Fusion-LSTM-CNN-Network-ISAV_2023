@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://img.shields.io/badge/Paper-ISAV%202023-green.svg)](https://jtvaa.ir/article-1-173-en.html)
+[![Paper](https://img.shields.io/badge/Paper-ISAV%202023-green.svg)](http://2023.isav.ir/article_9704.pdf)
 
 > **Revolutionizing industrial maintenance through intelligent fault detection!** This repository presents a groundbreaking deep learning approach that achieves **100% accuracy** in gearbox fault diagnosis by fusing the power of LSTM networks and CNNs with advanced signal processing techniques.
 

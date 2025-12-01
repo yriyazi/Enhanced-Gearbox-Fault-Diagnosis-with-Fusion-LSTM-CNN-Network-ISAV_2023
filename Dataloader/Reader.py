@@ -2,10 +2,13 @@ import os
 import csv
 import numpy as np
 import pandas as pd
+from numpy.typing import NDArray
+from typing import Tuple, List, TypeAlias
 
-def read_csv_files(folder_path):
-    csv_files = []
-    for root, dirs, files in os.walk(folder_path):
+DataSetType: TypeAlias = List[Tuple[str, List[List[str]]]]
+def read_csv_files(folder_path:str)->DataSetType:
+    csv_files: DataSetType = []
+    for root, _, files in os.walk(folder_path):
         for file in files:
             if file.endswith(".csv"):
                 file_path = os.path.join(root, file)
@@ -15,8 +18,8 @@ def read_csv_files(folder_path):
                     csv_files.append((file_path, data))
     return csv_files
     
-def array_iefier(csv_files):
-    _set = {}
+def array_iefier(csv_files: DataSetType):
+    _set: dict[str, NDArray[np.float64]] = {}
     for i in range(10):
         name = str(csv_files[i][0].split('\\')[-1].split('.')[0])
         _set[name] = None

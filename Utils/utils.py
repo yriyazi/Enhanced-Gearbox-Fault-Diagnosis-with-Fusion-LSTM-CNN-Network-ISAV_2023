@@ -4,7 +4,7 @@ import  torch.nn            as      nn
 import  numpy               as      np
 
 
-def set_seed(seed):
+def set_seed(seed: int) -> None:
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     random.seed(seed)

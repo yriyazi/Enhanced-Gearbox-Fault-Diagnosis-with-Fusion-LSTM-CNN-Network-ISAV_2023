@@ -1,5 +1,5 @@
 
-def save_report_to_file(report_content, filename):
+def save_report_to_file(report_content: str, filename: str) -> bool:
     """
     Save a report to a text file.
 
